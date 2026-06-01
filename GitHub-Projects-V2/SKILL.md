@@ -1,11 +1,6 @@
 ---
 name: github-projects-v2
-description: >
-  Manage GitHub Projects v2 using the `gh project` CLI. Use this skill when the agent needs
-  to list backlog items, set project fields (status, iteration, priority, etc.), add comments
-  to issues, create issues, or create sub-issues. Always use this skill for any GitHub Projects
-  board or issue management task.
-  Requires `project` scope: run `gh auth refresh -s project` if commands fail with auth errors.
+description: "Manage GitHub Projects v2 using the `gh project` CLI. Use this skill when the agent needs to list backlog items, set project fields (status, iteration, priority, etc.). Requires `project` scope: run `gh auth refresh -s project` if commands fail with auth errors."
 ---
 
 # GitHub Projects v2 Skill

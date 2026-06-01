@@ -1,29 +1,26 @@
-# GitHub-Projects-V2
+# OpenClaw Skills
 
-A [Copilot skill](https://code.visualstudio.com/docs/copilot/chat/chat-customization) for managing GitHub Projects v2 boards using the `gh project` CLI. Designed for use with AI agents and automation workflows that need to interact with GitHub Projects from the command line.
+A collection of OpenClaw skills for use with AI agents and automation workflows. Each subfolder contains a self-contained skill with its own `SKILL.md` and supporting files.
 
-## What it does
+## Skills
 
-This skill teaches an AI agent how to:
-
-- **List backlog items** — query project items with filters (status, assignee, open/closed)
-- **Set project fields** — update status, iteration, priority, story points, dates, etc.
-- **Add comments to issues** — post comments on issues from the project board
-- **Create issues** — create new issues and add them to a project
-- **Create sub-issues** — link child issues to a parent using the `gh-sub-issue` extension or GraphQL
-
-## Requirements
-
-- [`gh` CLI](https://cli.github.com/) installed and authenticated
-- `project` scope on the token — run `gh auth refresh -s project` if commands fail with auth errors
-
-## Files
-
-| File | Purpose |
-|------|---------|
-| [SKILL.md](SKILL.md) | Full skill instructions with command examples and patterns |
-| [skill-card.md](skill-card.md) | Short metadata card (description, use case, requirements, output format) |
+| Skill | Description |
+|-------|-------------|
+| [GitHub-Projects-V2](GitHub-Projects-V2/) | Manage GitHub Projects v2 boards using the `gh project` CLI — list backlog items, set fields, create issues, and more. |
 
 ## Usage
 
-Add this repository as a skill reference in your agent configuration. The agent will use the instructions in `SKILL.md` whenever it needs to manage GitHub Projects v2 boards, items, or fields.
+Add this repository (or an individual skill folder) as a skill reference in your agent configuration. The agent will use the instructions in the skill's `SKILL.md` whenever a matching task is detected.
+
+## Repository structure
+
+```
+<skill-folder>/
+  SKILL.md          # Full skill instructions (required)
+  skill-card.md     # Short metadata card (optional)
+  CHANGELOG.md      # Version history (optional)
+```
+
+## Contributing
+
+To add a new skill, create a folder at the repo root containing at minimum a `SKILL.md` with frontmatter (`name`, `description`) and the skill instructions.
